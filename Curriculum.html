@@ -1,311 +1,326 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Currículum — Francisco Javier Moreno Pérez</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Francisco Javier Moreno Pérez</title>
     <style>
-      :root {
-        --bg: #f6f7fb;
-        --card: #ffffff;
-        --accent: #0f62fe;
-        --muted: #6b7280;
-        --border: #e6e9ef;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-          Roboto, "Helvetica Neue", Arial;
-      }
-      body {
+      * {
         margin: 0;
-        background: var(--bg);
-        color: #111827;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.45;
-        padding: 32px;
-      }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-      .card {
-        background: var(--card);
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-        padding: 28px;
-        border: 1px solid var(--border);
-        display: flex;
-        gap: 28px;
-        flex-wrap: wrap;
-      }
-      .left {
-        flex: 0 0 260px;
-        min-width: 220px;
-      }
-      .right {
-        flex: 1 1 580px;
-        min-width: 260px;
-      }
-      .profile-name {
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0 0 4px 0;
-      }
-      .profession {
-        margin: 0 0 12px 0;
-        color: var(--muted);
-        font-weight: 600;
-      }
-      .contact,
-      .section {
-        margin-bottom: 18px;
-      }
-      .contact a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      .small {
-        font-size: 13px;
-        color: var(--muted);
-      }
-      .section-title {
-        font-weight: 700;
-        margin: 0 0 10px 0;
-        font-size: 15px;
-      }
-      ul.list {
-        margin: 0;
-        padding-left: 18px;
-      }
-      li.item {
-        margin-bottom: 8px;
-      }
-      .pill {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: #f1f5ff;
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 13px;
-        margin-right: 8px;
-        margin-bottom: 8px;
-      }
-      .meta {
-        font-size: 13px;
-        color: var(--muted);
-      }
-      .edu-item,
-      .exp-item {
-        margin-bottom: 12px;
-      }
-      .edu-title,
-      .exp-title {
-        font-weight: 600;
-      }
-      footer {
-        text-align: center;
-        margin-top: 18px;
-        color: var(--muted);
-        font-size: 13px;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      /* Responsive */
-      @media (max-width: 720px) {
-        .card {
-          padding: 18px;
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: #2c3e50;
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header .profession {
+        font-size: 1.3em;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+
+      .contact-info {
+        background: #34495e;
+        color: white;
+        padding: 20px 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        font-size: 0.9em;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .section {
+        margin-bottom: 35px;
+      }
+
+      .section h2 {
+        color: #2c3e50;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid #3498db;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .section p {
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      .section ul {
+        list-style: none;
+        padding-left: 3px;
+      }
+
+      .section ul li {
+        padding: 8px 0;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .section ul li:before {
+        content: "•";
+        color: #3498db;
+        font-weight: bold;
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+      }
+
+      .education-item {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid #3498db;
+      }
+
+      .education-item h3 {
+        color: #2c3e50;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+      }
+
+      .education-item .institution {
+        color: #3498db;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .education-item .description {
+        color: #666;
+        font-size: 0.95em;
+        margin-bottom: 5px;
+      }
+
+      .education-item .date {
+        color: #888;
+        font-size: 0.9em;
+        font-style: italic;
+      }
+
+      .languages {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .language-item {
+        background: #ecf0f1;
+        padding: 15px 25px;
+        border-radius: 5px;
+        border-left: 4px solid #3498db;
+      }
+
+      .language-item strong {
+        color: #2c3e50;
+      }
+
+      .experience-item {
+        background: #ecf0f1;
+        padding: 20px;
+        border-radius: 5px;
+        border-left: 4px solid #3498db;
+      }
+
+      .experience-item h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      .experience-item ul {
+        margin-left: 20px;
+      }
+
+      .experience-item ul li {
+        padding-left: 10;
+      }
+
+      .skills-list {
+        color: #555;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 768px) {
+        .contact-info {
+          grid-template-columns: 1fr;
         }
-        .left {
-          flex: 1 1 100%;
-          order: 2;
+
+        .content {
+          padding: 20px;
         }
-        .right {
-          flex: 1 1 100%;
-          order: 1;
+
+        .header h1 {
+          font-size: 2em;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div
-        class="card"
-        role="article"
-        aria-label="Currículum de Francisco Javier Moreno Pérez"
-      >
-        <aside class="left" aria-label="Información personal y contacto">
-          <img
-            style="
-              width: 100px;
-              height: 100px;
-              border-radius: 50%;
-              object-fit: cover;
-            "
-            src="Img_curriculum.png"
-            alt="Foto de Francisco Javier Moreno Pérez"
-          />
+      <div class="header">
+        <img
+          style="
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+          "
+          src="Img_curriculum.png"
+          alt="Foto de Francisco Javier Moreno Pérez"
+        />
+        <h1>Francisco Javier Moreno Pérez</h1>
+        <p class="profession">Profesión Informático</p>
+      </div>
 
-          <h1 class="profile-name">Francisco Javier Moreno Pérez</h1>
-          <div class="profession">Informático</div>
-          <div class="contact section" aria-labelledby="contact-title">
-            <div id="contact-title" class="section-title">Contacto</div>
-            <div class="small">Domicilio</div>
-            <div class="meta">
-              Zaidín — C/ Palermo nº 3 6 A izq, 18007, Granada
-            </div>
+      <div class="contact-info">
+        <p><strong>Domicilio:</strong> Zaidín C/ Palermo nº 3 6 A izq</p>
+        <p><strong>Edad:</strong> 20</p>
+        <p><strong>Fecha de nacimiento:</strong> 30/10/2004</p>
+        <p><strong>Teléfono:</strong> 640 51 62 60</p>
+        <p><strong>E-mail:</strong> granada.javi@gmail.com</p>
+        <p><strong>Nacionalidad:</strong> Español</p>
+        <p><strong>CP:</strong> 18007</p>
+        <p><strong>Ciudad:</strong> Granada</p>
+        <p><strong>Género:</strong> Masculino</p>
+      </div>
 
-            <div style="height: 8px"></div>
-            <div class="small">Teléfono</div>
-            <div class="meta"><a href="tel:+34640516260">640 51 62 60</a></div>
+      <div class="content">
+        <section class="section">
+          <h2>Educación</h2>
 
-            <div style="height: 8px"></div>
-            <div class="small">Email</div>
-            <div class="meta">
-              <a href="mailto:granada.javi@gmail.com">granada.javi@gmail.com</a>
-            </div>
-
-            <div style="height: 8px"></div>
-            <div class="small">Nacionalidad / Edad / Género</div>
-            <div class="meta">Español · 20 años · Masculino</div>
-
-            <div style="height: 8px"></div>
-            <div class="small">Fecha de nacimiento</div>
-            <div class="meta">30/10/2004</div>
-          </div>
-
-          <div class="section" aria-labelledby="skills-title">
-            <div id="skills-title" class="section-title">
-              Aptitudes & conocimientos
-            </div>
-            <div class="meta">
-              • Montaje y mantenimiento de ordenadores.<br />
-              • Instalar y configurar software base y de aplicación.<br />
-              • Instalación y configuración de redes locales (cableadas,
-              inalámbricas y mixtas).<br />
-              • Mantenimiento de servicios multiusuario y dispositivos
-              compartidos en red.<br />
-              • Diagnóstico de sistemas y redes mediante pruebas funcionales.<br />
-              • Gestión básica de sitios web y redes sociales.<br />
-              • Aplicaciones ofimáticas: Microsoft Office (Word, Excel,
-              PowerPoint...).<br />
-            </div>
-          </div>
-
-          <div class="section" aria-labelledby="digital-title">
-            <div id="digital-title" class="section-title">
-              Competencias digitales
-            </div>
-            <div>
-              <span class="pill">Montaje & Mantenimiento</span>
-              <span class="pill">Redes Locales</span>
-              <span class="pill">Seguridad Básica</span>
-              <span class="pill">Ofimática</span>
-              <span class="pill">Gestión Web</span>
-            </div>
-          </div>
-
-          <div class="section" aria-labelledby="langs-title">
-            <div id="langs-title" class="section-title">Idiomas</div>
-            <div class="meta">Español — Lengua nativa</div>
-            <div class="meta">Inglés — Básico</div>
-          </div>
-
-          <div class="section" aria-labelledby="certs-title">
-            <div id="certs-title" class="section-title">
-              Formación complementaria
-            </div>
-            <div class="meta">
-              Curso de prevención de riesgos laborales — IES Zaidín Vergeles (30
-              h)
-            </div>
-          </div>
-        </aside>
-
-        <main class="right" aria-label="Formación y experiencia">
-          <section class="section" aria-labelledby="profile-title">
-            <div id="profile-title" class="section-title">Perfil</div>
-            <p class="meta">
-              Estudiante de Formación Profesional en Sistemas Microinformáticos
-              y Redes con experiencia en prácticas en atención al cliente y
-              mantenimiento de equipos. Interés en soporte técnico, redes y
-              administración básica de sistemas.
+          <div class="education-item">
+            <p class="institution">IES Alba Longa</p>
+            <p class="description">
+              ESO / Formación Profesional Básica de Informática y Comunicaciones
             </p>
-          </section>
+            <p class="date">2021 - 2023</p>
+          </div>
 
-          <section class="section" aria-labelledby="edu-title">
-            <div id="edu-title" class="section-title">Educación</div>
+          <div class="education-item">
+            <p class="institution">IES Zaidín Vergeles</p>
+            <p class="description">
+              Formación Profesional de Grado Medio en Sistemas Microinformáticos
+              y Redes
+            </p>
+            <p class="date">20023 - Actual</p>
+          </div>
 
-            <div class="edu-item">
-              <div class="edu-title">
-                Formación Profesional de Grado Medio — Sistemas
-                Microinformáticos y Redes
-              </div>
-              <div class="meta">IES Zaidín Vergeles — 2023 - Actual</div>
+          <div class="education-item">
+            <p class="description">
+              Curso de prevención de riesgos laborales IES Zaidín Vergeles (30
+              h)
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Aptitudes y Conocimientos</h2>
+          <ul>
+            <li>
+              Instalar y configurar software básico y de aplicación, redes
+              locales cableadas, inalámbricas o mixtas y conectadas a redes
+              públicas.
+            </li>
+            <li>
+              Instalar, configurar y mantener servicios multiusuario,
+              aplicaciones y dispositivos compartidos en un entorno de red
+              local.
+            </li>
+            <li>Montar y configurar ordenadores y periféricos.</li>
+            <li>
+              Determinar la logística asociada a las operaciones de instalación,
+              configuración y mantenimiento de sistemas microinformáticos.
+            </li>
+            <li>Diagnosticar y redes mediante pruebas funcionales.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Competencias Digitales</h2>
+          <p class="skills-list">
+            Montaje y mantenimiento de ordenadores / Instalar y configurar el
+            software base en sistemas microinformáticos / Instalar y configurar
+            redes locales / Diagnosticar disfunciones en sistemas
+            microinformáticos y redes / Creación y Gestión de Sitios Web /
+            Seguridad y Gestión de Redes Locales / Manejo de Redes Sociales /
+            Aplicaciones Ofimáticas / Microsoft Office (Word, Excel, PowerPoint,
+            ...)
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Idiomas</h2>
+          <div class="languages">
+            <div class="language-item">
+              <strong>Español</strong> (Lengua Nativa)
             </div>
+            <div class="language-item"><strong>Inglés</strong> (Básico)</div>
+          </div>
+        </section>
 
-            <div class="edu-item">
-              <div class="edu-title">
-                ESO / Formación Profesional Básica — Informática y
-                Comunicaciones
-              </div>
-              <div class="meta">IES Alba Longa / IES Zaidín Vergeles</div>
-            </div>
-          </section>
-
-          <section class="section" aria-labelledby="exp-title">
-            <div id="exp-title" class="section-title">Experiencia</div>
-
-            <div class="exp-item">
-              <div class="exp-title">
-                Formación en Centros de Trabajo — Arena Gaming (Prácticas)
-              </div>
-              <div class="meta">260 h</div>
-              <ul class="list">
-                <li class="item">Atención al cliente.</li>
-                <li class="item">Mantenimiento de equipos.</li>
-                <li class="item">Relación con proveedores.</li>
-              </ul>
-              <div class="exp-title">
-                Formación en Centros de Trabajo — TM Dijital (Prácticas)
-              </div>
-              <div class="meta">380 h</div>
-              <ul class="list">
-                <li class="item">
-                  Atención al cliente y soporte técnico en campo.
-                </li>
-                <li class="item">
-                  Instalación y mantenimiento de redes de fibra óptica.
-                </li>
-                <li class="item">
-                  Uso de herramientas y equipos especializados.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section" aria-labelledby="courses-title">
-            <div id="courses-title" class="section-title">Cursos y módulos</div>
-            <ul class="list">
-              <li class="item">Montaje y mantenimiento de ordenadores</li>
-              <li class="item">
-                Instalar y configurar el software base en sistemas
-                microinformáticos
-              </li>
-              <li class="item">Instalar y configurar redes locales</li>
-              <li class="item">
-                Diagnosticar disfunciones en sistemas microinformáticos y redes
-              </li>
-              <li class="item">Creación y gestión de sitios web</li>
-              <li class="item">Seguridad y gestión de redes locales</li>
-              <li class="item">Manejo de redes sociales</li>
-              <li class="item">Aplicaciones ofimáticas</li>
+        <section class="section">
+          <h2>Experiencia</h2>
+          <div class="experience-item">
+            <h3>
+              Formación en centros de trabajo (Prácticas laborales), Arena
+              gaming 260 h:
+            </h3>
+            <ul>
+              <li>Atención al cliente.</li>
+              <li>Mantenimiento de equipos.</li>
+              <li>Relación con proveedores.</li>
             </ul>
-          </section>
-
-          <section class="section" aria-labelledby="other-title">
-            <div id="other-title" class="section-title">Datos adicionales</div>
-            <div class="meta">Código Postal: 18007 — Ciudad: Granada</div>
-          </section>
-        </main>
+            <br />
+            <h3>
+              Formación en Centros de Trabajo — TM Dijital (Prácticas) 380 h
+            </h3>
+            <ul class="list">
+              <li class="item">
+                Atención al cliente y soporte técnico en campo.
+              </li>
+              <li class="item">
+                Instalación y mantenimiento de redes de fibra óptica.
+              </li>
+              <li class="item">
+                Uso de herramientas y equipos especializados.
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
   </body>
 </html>
+
