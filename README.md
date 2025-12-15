@@ -1,2 +1,2 @@
-# porfolio
-Curriculum personal
+Aquí dejo el enlace a mi curriculum:
+
